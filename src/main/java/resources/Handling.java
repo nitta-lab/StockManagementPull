@@ -9,6 +9,7 @@ public class Handling {
 	private Item request;
 	private Stock stock;
 	private ItemHandling value;
+	Shipping shipping;
 
 	public Handling(Stock stock) {
 		this.stock = stock;
