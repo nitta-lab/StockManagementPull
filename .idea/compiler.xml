@@ -3,4 +3,10 @@
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel target="12" />
   </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="StockManagement.main" options="--add-modules java.base" />
+      <module name="StockManagement.test" options="--add-modules java.base" />
+    </option>
+  </component>
 </project>

@@ -1,0 +1,41 @@
+Arrive A: 10
+Arrive B: 20
+stock:
+A: 10
+B: 20
+
+shotage:
+A: 0
+B: 0
+shipping:
+B: 0
+Request A: 5
+stock:
+A: 5
+B: 20
+
+shotage:
+A: 0
+B: 0
+shipping:
+A: 5
+Request A: 10
+stock:
+A: 5
+B: 20
+
+shotage:
+A: 10
+B: 0
+shipping:
+A: 0
+Arrive A: 10
+stock:
+A: 5
+B: 20
+
+shotage:
+A: 0
+B: 0
+shipping:
+A: 10

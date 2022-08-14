@@ -15,11 +15,13 @@ public class StockManagement {
 
 	public StockManagement() {
 		stock = new Stock();
-		handling = new Handling(stock);
+		shipping = new Shipping();
+//		handling = new Handling(stock);
+		handling = new Handling(stock, shipping);
 		shortage = new Shortage();
 		available = new Available(shortage, handling);
 		arrival = new Arrival(available,stock);
-		shipping = new Shipping(handling);
+//		shipping = new Shipping(handling);
 		request = new Request(shortage, handling,stock);
 	}
 

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="MainTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-08-14T15:04:14" hostname="ACCMAN-SERVER" time="0.122">
+  <properties/>
+  <testcase name="test()" classname="MainTest" time="0.122"/>
+  <system-out><![CDATA[Arrive A: 10
+Arrive B: 20
+stock:
+A: 10
+B: 20
+shotage:
+A: 0
+B: 0
+shipping:
+B: 0
+Request A: 5
+stock:
+A: 5
+B: 20
+shotage:
+A: 0
+B: 0
+shipping:
+A: 5
+Request A: 10
+stock:
+A: 5
+B: 20
+shotage:
+A: 10
+B: 0
+shipping:
+A: 0
+Arrive A: 10
+stock:
+A: 5
+B: 20
+shotage:
+A: 0
+B: 0
+shipping:
+A: 10
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
