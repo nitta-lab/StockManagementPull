@@ -1,8 +1,8 @@
 package resources;
+import java.util.Map;
+
 import values.Item;
 import values.ItemHandling;
-
-import java.util.*;
 
 public class StockManagement {
 	private Stock stock;
@@ -15,11 +15,13 @@ public class StockManagement {
 
 	public StockManagement() {
 		stock = new Stock();
-		handling = new Handling(stock);
+		//6.StockManagement クラスのコンストラクタ内で，Handling クラスのインスタンスが Shipping クラスのインスタンスを参照するよう，インスタンスの生成順や生成方法を変更する．
+		shipping = new Shipping();
+		handling = new Handling(stock, shipping);
+		
 		shortage = new Shortage();
 		available = new Available(shortage, handling);
 		arrival = new Arrival(available,stock);
-		shipping = new Shipping(handling);
 		request = new Request(shortage, handling,stock);
 	}
 
