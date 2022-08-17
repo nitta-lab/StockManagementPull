@@ -5,12 +5,13 @@ import values.ItemHandling;
 import java.util.*;
 
 public class Handling {
+	Shipping shipping;
 	private Item available;
 	private Item request;
 	private Stock stock;
 	private ItemHandling value;
 
-	public Handling(Stock stock) {
+	public Handling(Stock stock, Shipping shipping) {
 		this.stock = stock;
 	}
 
