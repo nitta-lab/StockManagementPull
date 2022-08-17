@@ -13,6 +13,7 @@ public class Handling {
 
 	public Handling(Stock stock, Shipping shipping) {
 		this.stock = stock;
+		this.shipping = shipping;
 	}
 
 	public void updateAvailable(Item available, Map<String, Integer> shortage) {
@@ -43,6 +44,7 @@ public class Handling {
 		}
 		value = temp_if2;
 		this.stock.updateHandling(new ItemHandling(value));
+		shipping.updateHandling(value);
 	}
 
 	public void updateRequest(Item request, Map<String, Integer> stock) {
@@ -73,6 +75,7 @@ public class Handling {
 		}
 		value = temp_if3;
 		this.stock.updateHandling(new ItemHandling(value));
+		shipping.updateHandling(value);
 	}
 
 	public ItemHandling getValue() {
