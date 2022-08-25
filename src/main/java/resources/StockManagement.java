@@ -1,8 +1,8 @@
 package resources;
+import java.util.Map;
+
 import values.Item;
 import values.ItemHandling;
-
-import java.util.*;
 
 public class StockManagement {
 	private Stock stock;
@@ -14,13 +14,22 @@ public class StockManagement {
 	private Request request;
 
 	public StockManagement() {
+//		stock = new Stock();
+		//		handling = new Handling(stock);
+		//		shortage = new Shortage();
+		//		available = new Available(shortage, handling);
+		//		arrival = new Arrival(available,stock);
+		//		shipping = new Shipping(handling);
+		//		request = new Request(shortage, handling,stock);
+		
+		shipping = new Shipping();
 		stock = new Stock();
-		handling = new Handling(stock);
+		handling = new Handling(stock,shipping);
 		shortage = new Shortage();
 		available = new Available(shortage, handling);
 		arrival = new Arrival(available,stock);
-		shipping = new Shipping(handling);
 		request = new Request(shortage, handling,stock);
+
 	}
 
 	public void arrive(int num, String item) {
