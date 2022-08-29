@@ -1,17 +1,19 @@
 package resources;
+import java.util.Map;
+
 import values.Item;
 import values.ItemHandling;
-
-import java.util.*;
 
 public class Handling {
 	private Item available;
 	private Item request;
 	private Stock stock;
 	private ItemHandling value;
+	private Shipping shipping;
 
-	public Handling(Stock stock) {
+	public Handling(Stock stock, Shipping shipping) {
 		this.stock = stock;
+		this.shipping = shipping;
 	}
 
 	public void updateAvailable(Item available, Map<String, Integer> shortage) {
@@ -42,6 +44,7 @@ public class Handling {
 		}
 		value = temp_if2;
 		this.stock.updateHandling(new ItemHandling(value));
+		this.shipping.updateHandling(new ItemHandling(value));
 	}
 
 	public void updateRequest(Item request, Map<String, Integer> stock) {
@@ -72,6 +75,7 @@ public class Handling {
 		}
 		value = temp_if3;
 		this.stock.updateHandling(new ItemHandling(value));
+		this.shipping.updateHandling(new ItemHandling(value));
 	}
 
 	public ItemHandling getValue() {
